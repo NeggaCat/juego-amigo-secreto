@@ -5,7 +5,7 @@ let listaAmigos = []
 function agregarAmigo(){
 let textoAmigo = document.getElementById("amigo").value   //Obtiene variable de nombre que colocó el usuario en caja de imput
 
-if (textoAmigo == ""){              //Manda mendaje tipo alert si la lista está vacía
+if (textoAmigo == ""){              //Manda mensaje tipo alert si la lista está vacía
 alert("Por favor inserte un nombre")
 
 }  else{
@@ -40,10 +40,9 @@ if (listaAmigos.length < 2){
     alert("Agrega un mínimo de 2 nombres para poder sortear") //Verifica si la lista está vacía o tiene menos de 2 nombres agregados
 
 }else{
-    let indiceAleatoreo = Math.floor((Math.random()*listaAmigos.length))
-    let nombreSorteado = listaAmigos[indiceAleatoreo]
+    let indiceAleatoreo = Math.floor((Math.random()*listaAmigos.length)) //Genera número aleatoreo entre 0 y el número de longitud de la lista
+    let nombreSorteado = listaAmigos[indiceAleatoreo]                    //Variable que seleccionó el nombre ya sorteado
 
-    document.getElementById("resultado").innerHTML = `El nombre sorteado fue: ${nombreSorteado}`
+    document.getElementById("resultado").innerHTML = `El nombre sorteado fue: ${nombreSorteado}` //Toma el espacio del documento donde irá el nombre sorteado y le agrega texto
 }
 }
-
